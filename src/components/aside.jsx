@@ -1,22 +1,29 @@
 import React from "react"
+import conect from "../modules/conect";
 class Aside extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { item: false };
+        this.state = { item: false, fotourl:'aaaaaaaaa'};
     }
+  async api(){
+  const req=  await conect.conectbasic('isaias-silva')
+    await this.setState({fotourl:req.data.avatar_url})
+}
     render() {
+        this.api()
         if(this.state.item===false){
-
+        
 
         return (<aside>
-            <button className="ver" onClick={(x) => { 
-                if (this.state.item === false) { this.setState({ item: true })  } else { this.setState({ item: false }) }
+            <button className="ver" onClick={(x) => {
+                if (this.state.item === false) { this.setState({ item: true })
+                  } else { this.setState({ item: false }) }
             }}>
                 I
             </button>
 
             <div className="habilit esconder">
-                <img src="https://avatars.githubusercontent.com/u/84031593?s=400&u=a90e9023c92987804f553691f435d9dcae7a8fb0&v=4" alt="" />
+                <img src={this.state.fotourl} alt="avatar" />
                 <h2>conhecimentos</h2>
                 <ul>
                     <li>html5</li>
@@ -25,6 +32,8 @@ class Aside extends React.Component {
                     <li>python</li>
                     <li>java</li>
                     <li>mysql</li>
+                    <li>C/C++</li>
+
                 </ul>
                 <h2>habilidades</h2>
                 <ul>
@@ -39,13 +48,16 @@ class Aside extends React.Component {
         }else{
             return (<aside>
                 <button className="ver on" onClick={(x) => { 
-                    if (this.state.item === false) { this.setState({ item: true })  } else { this.setState({ item: false }) }
+                    if (this.state.item === false) { this.setState({ item: true }) 
+                     } else { this.setState({ item: false })
+                    }
                 }}>
                     I
                 </button>
     
                 <div class="habilit">
-                    <img src="https://avatars.githubusercontent.com/u/84031593?s=400&u=a90e9023c92987804f553691f435d9dcae7a8fb0&v=4" alt="" />
+                <img src={this.state.fotourl} alt="avatar" />
+
                     <h2>conhecimentos</h2>
                     <ul>
                         <li>html5</li>
@@ -54,6 +66,7 @@ class Aside extends React.Component {
                         <li>python</li>
                         <li>java</li>
                         <li>mysql</li>
+                        
                     </ul>
                     <h2>habilidades</h2>
                     <ul>
