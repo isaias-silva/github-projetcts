@@ -13,38 +13,40 @@ class Aside extends React.Component {
         this.api()
         if(this.state.item===false){
         
-
-        return (<aside>
-            <button className="ver" onClick={(x) => {
-                if (this.state.item === false) { this.setState({ item: true })
-                  } else { this.setState({ item: false }) }
-            }}>
-                I
-            </button>
-
-            <div className="habilit esconder">
+            return (<aside>
+                <button className="ver" onClick={(x) => { 
+                    if (this.state.item === false) { this.setState({ item: true }) 
+                     } else { this.setState({ item: false })
+                    }
+                }}>
+                    I
+                </button>
+    
+                <div class="habilit esconder">
                 <img src={this.state.fotourl} alt="avatar" />
-                <h2>conhecimentos</h2>
-                <ul>
-                    <li>html5</li>
-                    <li>css3</li>
-                    <li>javascript</li>
-                    <li>python</li>
-                    <li>java</li>
-                    <li>mysql</li>
-                    <li>C/C++</li>
 
-                </ul>
-                <h2>habilidades</h2>
-                <ul>
-                    <li>criação de bots(webscraping e automação)</li>
-                    <li>programação frontend(Reactjs)</li>
-                    <li>programação backend(Nodejs)</li>
-                    <li>desenho digital</li>
-
-                </ul>
-            </div>
-        </aside>)
+                    <h2>conhecimentos</h2>
+                    <ul>
+                        <li>html5</li>
+                        <li>css3</li>
+                        <li>javascript</li>
+                        <li>python</li>
+                        <li>java</li>
+                        <li>mysql</li>
+                        
+                    </ul>
+                    <h2>habilidades</h2>
+                    <ul>
+                        <li>criação de bots(webscraping e automação)</li>
+                        <li>programação frontend(Reactjs)</li>
+                        <li>programação backend(Nodejs)</li>
+                        <li>desenho digital</li>
+                    </ul>
+                </div>
+            </aside>)
+     
+             
+ 
         }else{
             return (<aside>
                 <button className="ver on" onClick={(x) => { 

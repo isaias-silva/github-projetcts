@@ -45,29 +45,29 @@ header h1 {
 }
 
 aside {
-    position: fixed;
+   position: fixed;
     text-align: center;
     z-index: 10;
+
 }
 
 aside button {
     z-index: 100;
+    
 }
 
 .habilit {
+height: 500px;
     background-color: rgb(4, 4, 4);
-    padding: 30px;
     border: 2px solid aquamarine;
     border-style: none solid none none;
-    position: relative;
     height: 435px;
     box-shadow: 4px 4px 8px black;
-
+overflow: hidden;
 
 }
-
-.habilit.esconder {
-    left: -400px;
+.habilit.esconder{
+    height: 0px;
 }
 
 aside img {
@@ -99,14 +99,36 @@ section {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-justify-content: center;
+    justify-content: center;
+}
+
+.prod a {
+    text-decoration: none;
 }
 
 .box {
-    background-color: black;
+    background-color: rgb(41, 41, 41);
+    background-image: url('https://iconbug.com/data/76/512/ee1fe23d18cabe4b16b0120191e64b33.png');
+    background-size: cover;
     width: 300px;
     height: 300px;
     margin: 2px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-between;
+    transition: 0.5s linear;
+    margin: 10px;
+}
+.box:active{background-color: aqua;}
+.box:hover{
+    transform: scale(0.9);
+}
+.box h2,.describ{
+    width: 100%;
+    background-color: rgba(0, 75, 133, 0.7);
+    text-align: center;
 }
 
 footer ul li {
