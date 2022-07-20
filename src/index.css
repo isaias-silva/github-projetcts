@@ -108,7 +108,7 @@ section {
 
 .box {
     background-color: rgb(41, 41, 41);
-    background-image: url('https://iconbug.com/data/76/512/ee1fe23d18cabe4b16b0120191e64b33.png');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzSI_I9DgQ_ciZ_sd0bkWFdXcZSXDUyF2apw&usqp=CAU');
     background-size: cover;
     width: 300px;
     height: 300px;
@@ -119,7 +119,7 @@ section {
     overflow: hidden;
     justify-content: space-between;
     transition: 0.5s linear;
-    margin: 10px;
+    margin: 20px;
 }
 .box:active{background-color: aqua;}
 .box:hover{
@@ -127,8 +127,9 @@ section {
 }
 .box h2,.describ{
     width: 100%;
-    background-color: rgba(0, 75, 133, 0.7);
+    background-color: rgba(0, 75, 133, 0.39);
     text-align: center;
+    padding: 2px;
 }
 
 footer ul li {

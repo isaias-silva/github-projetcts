@@ -1,7 +1,7 @@
 const header= function(){
     return (<header>
   
-       <h1> Zackblack </h1>
+       <h1> Isaías santos </h1>
       
     </header>)
 }
